@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+	*{
+    	font-family: sans-serif;
+    }
+    .cont {
+    	display: grid;
+        grid-template-columns: repeat(5, 200px);
+        grid-gap: 10px;
+    }
+    button{
+    margin-bottom: 10px;
+    width: 100%;
+    }
+</style>
+
+<button onclick="showContent()">Show hidden content</button>
+
+<template>
+  <div class="box">
+  	<img src="img_white_flower.jpg" width="200" height="200">
+  </div>
+</template>
+
+<div class="cont"></div>
+
+<script>
+function showContent() {
+genContent()
+genContent()
+genContent()
+genContent()
+genContent()
+}
+function randomNumber(min, max) {
+  return Math.floor( Math.random() * (max - min) + min);
+}
+
+function genContent(){
+  var temp = document.getElementsByTagName("template")[0];
+  var clon = temp.content.cloneNode(true);
+  const sizes = randomNumber(200, 220) + '/' + randomNumber(200, 220)
+  clon.querySelector('img').src = '//picsum.photos/' + sizes
+  document.querySelector('div.cont').appendChild(clon);
+}
+showContent()
+</script>
+
+</body>
+</html>
+

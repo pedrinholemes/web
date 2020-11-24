@@ -1,0 +1,46 @@
+
+@media (max-width: 960px) {
+  .container {
+    .imgBx {
+      display: none;
+    }
+    .countdownBx {
+      width: 100vw;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .container .countdownBx {
+    h2 {
+      font-size: 1.1em;
+    }
+    .countdown {
+      height: 100px;
+      padding-bottom: 30px;
+      div {
+        width: 80px;
+        font-size: 2em;
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .container .countdownBx {
+    h2 {
+      font-size: 0.88em;
+    }
+    .countdown {
+      height: 80px;
+      padding-bottom: 20px;
+      div {
+        width: 65px;
+        font-size: 1.7em;
+        &::before {
+          bottom: -25px;
+        }
+      }
+    }
+  }
+}

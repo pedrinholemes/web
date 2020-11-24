@@ -1,0 +1,64 @@
+$backColor: #ff4c29;
+$foreColor: #fff;
+$foreHighlightedColor: #ff0;
+$backImageURL: "https://picsum.photos/id/1025/512/1100";
+
+.container.flip {
+  transform: scale(-1, 1);
+}
+.container.invert {
+  filter: grayscale(1) contrast(7);
+
+  a.optionButton {
+    color: white;
+  }
+
+  .container {
+    .imgBx {
+      display: none;
+    }
+    .countdownBx {
+      width: 100vw;
+    }
+  }
+}
+
+*,
+input,
+textarea {
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, sans-serif;
+  box-sizing: border-box;
+}
+html,
+body,
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+a.optionButton {
+  cursor: pointer;
+  font-weight: 900;
+  z-index: 1000;
+  padding: 8px;
+  text-transform: uppercase;
+}
+
+a.flipButton {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+a.invertButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(-20%);
+}
+
+@import "main";
+@import "responsive";
